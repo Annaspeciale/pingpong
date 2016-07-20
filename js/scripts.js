@@ -21,6 +21,7 @@ var pingPong = function(randomNumber) {
 //User Interface Logic//
 $(document).ready(function(event) {
 	$("form#pingpong").submit(function(event) {
+		event.preventDefault();
 	
 	var inputNumber = parseInt($("input#number").val());
 	var result = pingPong(inputNumber);
@@ -32,6 +33,6 @@ $(document).ready(function(event) {
 	$("#output").show();
 	
 
-	event.preventDefault();
+	
 	});
 });
