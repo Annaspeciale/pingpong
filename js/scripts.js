@@ -1,9 +1,8 @@
 //Business Logic//
 var pingPong = function(randomNumber) {
 	var result = [];
-	var index;
 	
-	for (var index = 1; index <= randomNumber; index += 1) {
+	for(var index = 1; index <= randomNumber; index += 1) {
 
 	if (randomNumber % 15 === 0) {
 		result.push("pingpong");
@@ -21,15 +20,15 @@ var pingPong = function(randomNumber) {
 
 
 //User Interface Logic// 
-$(document).ready(function(event) {
+$(document).ready(function() {
 	$("form#pingpong").submit(function(event) {
 
 		event.preventDefault();
 	
 	var inputNumber = parseInt($("input#number").val());
-	var result = pingPong(inputNumber);
+	var output = pingPong(inputNumber);
 
-	result.forEach(function(index) {
+	output.forEach(function(index) {
 	$(".numberList").append("<li>" + index + "</li>");
 	});
 
